@@ -1,0 +1,138 @@
+
+#wrapper1{
+	width: auto;
+	height: 200px;
+}
+
+#banner{
+	background-color: #F0F0F0 ;
+	width: auto;
+	height: 130px;
+
+}
+#wrapper2{
+	width: auto;
+	height: 650px;
+	background-image: url(../IMG/bg-grid.gif);
+	/*background-repeat: repeat-x;*/
+}
+#lRibbon{
+	background-image: url(../IMG/lRibbon.png);
+	height: 20px;
+	width: 35%;
+	margin-top: 25px;
+	float: left;
+	
+}
+#rRibbon{
+	background-image: url(../IMG/rRibbon.png);
+	height: 20px;
+	width: 35%;
+	margin-top: 25px;
+	float: right;
+}
+#signIn{
+	position: relative;
+	background-color: white;
+	height: 20px;
+	width: 250px;
+	padding-right: 75px;
+	margin-top: 25px;
+	float: right;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20pt;
+	font-family: Georgia;
+	font-style: italic;
+	padding: none;
+}
+/*to absolute position teh email and pwd text fields*/
+.container{
+	position:absolute;  /*1. when you want to position a div in the page, always start with this "position" property*/
+    top: 52%;  /*2. when you want to position an element like, div always have these first 3 steps */
+    left: 20%; /*3.*/
+    width:30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #fff;
+    text-align: left;
+}	
+.container ul li{
+	list-style: none;
+}
+.container a{
+	font-weight: bold;
+	font-size: 20pt;
+	font-family: Georgia;
+	font-style: italic;
+	float: right;
+
+}
+#btn_submit{
+	height: 5em;
+}
+#banner2{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Georgia;
+	font-style: italic;
+	text-align: center;
+	color: black;
+	background-color: #FFCCCC;
+	height: 30px;
+	width: 600px;
+	padding-right: 50px;
+	margin-top: 15px;
+	border-radius: 10px;
+	margin: 1px;
+	margin-left: 250px;
+}
+
+#email{
+	border-radius: 10px;	/*brings rounded corner effect. > the pixels more curvier  */
+	padding: 10px;
+	width: 175px;
+	height: 10px;
+}
+#password{
+	border-radius: 10px;
+	padding: 10px;
+	width: 175px;
+	height: 10px;
+}
+#Submit{
+	border-radius: 50px;
+	width: 50px;
+	height: 10px;
+	background-color: rgb(80,0,0);
+}
+/*this style is for myInfo page specific*/
+.container input{
+	border-radius: 10px;
+	padding: 10px;
+	width: 175px;
+	height: 10px;
+}
+#info{
+	position: absolute;
+	width: 89em;
+	top: 75%;
+	height: 10em;
+	background-color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Georgia;
+	font-style: italic;
+	color: white;
+	overflow: scroll;
+}
+#info h4{
+	color: white;
+}
+#footer{
+	background-color: #F0F0F0 ;
+	width: auto;
+	height: 30px;	
+	padding: none;
+}
