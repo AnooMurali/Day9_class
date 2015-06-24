@@ -35,13 +35,13 @@
 	position: relative;
 	background-color: white;
 	height: 20px;
-	width: 250px;
+	width: 300px;
 	padding-right: 75px;
 	margin-top: 25px;
 	float: right;
 	text-align: center;
 	font-weight: bold;
-	font-size: 20pt;
+	font-size: 16pt;
 	font-family: Georgia;
 	font-style: italic;
 	padding: none;
@@ -70,9 +70,14 @@
 
 }
 #btn_submit{
-	height: 5em;
+	border-radius: 50px;
+	width: 60px;
+	height: 40px;
+	background-color: rgb(80,0,0);
+	color: white;
 }
 #banner2{
+	/*position: fixed;*/
 	font-weight: bold;
 	font-size: 12pt;
 	font-family: Georgia;
@@ -81,12 +86,25 @@
 	color: black;
 	background-color: #FFCCCC;
 	height: 30px;
-	width: 600px;
+	width: 850px;
 	padding-right: 50px;
-	margin-top: 15px;
+	margin-top: 1px;
 	border-radius: 10px;
 	margin: 1px;
 	margin-left: 250px;
+
+}
+#click{
+	height: 25px;
+ 	width: 25px;
+ 	border-radius: 12px;
+ 	background-color: green;
+ 	margin: 2px;
+ 	font-size: 6pt;
+	font-family: Georgia;
+	text-align: center;
+	color: black;
+	float: right;
 }
 
 #email{
@@ -101,12 +119,12 @@
 	width: 175px;
 	height: 10px;
 }
-#Submit{
+/*#Submit{
 	border-radius: 50px;
 	width: 50px;
 	height: 10px;
 	background-color: rgb(80,0,0);
-}
+}*/
 /*this style is for myInfo page specific*/
 .container input{
 	border-radius: 10px;
@@ -118,7 +136,7 @@
 	position: absolute;
 	width: 89em;
 	top: 75%;
-	height: 10em;
+	height: 13em;
 	background-color: black;
 	font-weight: bold;
 	font-size: 12pt;

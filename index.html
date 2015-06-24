@@ -4,32 +4,15 @@
 	<title>Day9_Workshop</title>
 	<!--linking to custom stylesheet -->
 	<link rel="stylesheet" href="CSS/style.css"/>
-	<!-- javascript library -->
-	<script type="text/javascript">
-		// function validUser(){
-
-		// }
-	</script>
-	<!-- jquery library included here -->
+	<!--linking to javascript page-->
+	 <script src="JS/engine.js"></script>
+	<!-- jquery library  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<!--linking to jquery  -->
-	<script src="JS/engine.js"></script>
-		<script> 
-			$(document).ready(function(showBanner){ // this line means when the document is loaded or ready, then perform the below funtion. Ready in this statement 												is the event that invokes the function.
-				$("#banner2").hide();
-			
-				// var valEmail, valPass, inptEmail, inptPass;
-				// 	valEmail = "anoo@g.com";
-				// 	valPass = "pass123";
-				// 	inptEmail = $('#email').val();
-				// 	inptPass = $('#password').val();
-
-				// 	if ( inptEmail === valEmail) {
-				// 		console.log( inptEmail );
-				// 	}	
-						})
-		</script>
+	
+		<!-- Shake effect in jQuery can only be used by including this js library -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
+
 <body>
 <div id="wrapper1">
 	<div id="banner"></div>
@@ -40,16 +23,52 @@
 	</div>	<!--Wrapper2 ends here-->
 	<div id="wrapper3">
 		<div class="container">
-		<!-- create a list for email and password -->
-			<div id="banner2">Sorry. Your email or password is incorrect. Please try again.</div>
-			<form action="myInfo.html" method=post>
+		 <!-- create a list for email and password -->
+			<div id="banner2">Sorry. Your email and/or password is incorrect. Please try again. Click on green button for "shake" effect.
+				<div id="click">Click</div>
+			</div>
+			<form>
 					<label id="user_email"><b>Email</b></label> &nbsp &nbsp &nbsp&nbsp&nbsp
-					<input id="email" name="anoo21@gmail.com" type="email"/>
+					<input id="inptEmail" name="anoo@g.com" type="email"/>
 					<br><br>
 					<label id="user_password"><b>Password</b></label> &nbsp
-					<input id="password" name="pass123" type="password" /><br><br>	
-					<input type="submit" name="submit" id="btn_submit" value="Submit" onclick = ""/>
-			</form>
+					<input id="inptPass" name="pass123" type="password" /><br><br>
+			</form>	
+					<button id="btn_submit">Submit</button>
+			<script>
+			// <!-- jquery boiler plate.To google just type jquery boilerplate or angular boilerplate-->
+			// when document is loaded hide teh banner. 'Ready' in this statement is the event that invokes the function.
+				$(document).ready (function() {
+					$("#banner2").hide();
+					$("#click").hide();
+				});
+				$("#btn_submit").click(function() {
+						// console.log("Button works"); --to check if submit button works
+						//set email and password
+						var valEmail = "anoo@g.com"; 
+						var valPass = "pass123";
+						// if/else logic to validate what the user has entered in the input fields (email and password)
+						//get value from user input fields  -for email field
+						var inptEmail = document.getElementById( "inptEmail" ).val;
+						//get value from user input fields  -for password field
+						var inptPass = document.getElementById( "inptPass" ).val;
+						//check if username & password is correct
+						if (inptEmail == valEmail && inptPass == valPass) { //Password field is not getting validated.
+							// alert("values entered matches")
+							window.location.href = "myInfo.html";
+						}
+						else {
+							$("#banner2").show();
+							$("#click").show();	   //My intention was to show the banner and shake it as well. couldn't achieve that.
+						}
+				});
+				// when user clicks on this green circle, banner should shake
+				$("#click").click(function() {
+						$("#banner2").effect("shake");
+				});
+				
+			</script>
+
 		</div>  <!-- container ends here   -->
 	</div>	<!--Wrapper3 ends here-->
 	<div id= "info"><h4>Informational:</h4>
@@ -63,7 +82,7 @@
 
 		</ul>
 	</div>
-	<div id="footer">Footer</div>
+	<!-- <div id="footer">Footer</div> -->
 </div>  <!--Wrapper1 ends here-->
 </body>
 </html>
